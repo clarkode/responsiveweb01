@@ -1,0 +1,183 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	letter-spacing: 1px;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+.container{
+	width: 100%;
+}
+
+header{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(10deg, #ff5555, #000);
+}
+
+.navbar{
+	width: 100%;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 100px;
+	background: rgba(0,0,0,0.9);
+}
+
+.logo a{
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.menu ul li{
+	display: inline;
+}
+
+.menu ul li a{
+	font-size: 18px;
+	margin-left: 40px;
+	color: #fff;
+}
+
+.bars{
+	width: 35px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	display: none;
+}
+
+.bars-item{
+	background: #fff;
+	width: 100%;
+	height: 4px;
+	margin: 3px;
+}
+
+.bars-item:first-child,
+.bars-item:last-child{
+	width: 70%;
+}
+
+.content{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 80%;
+}
+
+.content h1{
+	font-size: 40px;
+	margin-bottom: 0px;
+	font-weight: 100;
+	margin-top: 90px;
+	color: #fff;
+}
+
+.content p{
+	font-size: 20px;
+	margin-bottom: 20px;
+	color: #fff;
+}
+
+.content img{
+	width: 650px;
+}
+
+.content img:last-child{
+	width: 500px;
+	position: absolute;
+	top: 250px;
+}
+
+.btn{
+	padding: 15px 20px;
+	background: transparent;
+	border: 1px solid;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 100px;
+	outline: none;
+	cursor: pointer;
+}
+
+.get-started{
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* 
+ * Responsive ----------------------------------------
+*/
+
+@media screen and (max-width: 1224px) {
+	.content img:last-child{
+		top: 195px;
+	}
+}
+
+@media screen and (max-width: 870px) {
+	.navbar{
+		padding: 30px;
+	}
+	.menu{
+		display: none;
+	}
+	.bars{
+		display: flex;
+	}
+	.content img{
+		width: 550px;
+	}
+	.content img:last-child{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.content img{
+		width: 350px;
+	}
+	.content img:last-child{
+		display: none;
+	}
+	.content h1{
+		text-align: center;
+		padding: 0 20px;
+	}
+	.get-started{
+		top: 70%
+	}
+}
+
+@media screen and (max-width: 570px) {
+	.menu{
+		display: none;
+	}
+	.content img:last-child{
+		display: none;
+	}
+}
